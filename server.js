@@ -4,7 +4,7 @@ import connectToMongoDB from "./conn.js";
 import routes from "./routes/routes.js";
 import dotenv from "dotenv";
 import cors from 'cors';
-// import multer from 'multer
+// import multer from 'multer'
 
 dotenv.config();
 
