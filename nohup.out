@@ -1,0 +1,48 @@
+MongoDB connected successfully
+Server running on port 3007
+MongoDB connected at mongodb+srv://jobminar:jobminar@cluster0.3uif2ib.mongodb.net/?retryWrites=true&w=majority
+MongoDB disconnected
+MongoNetworkError: 0078BFCCCE140000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1586:SSL alert number 80
+
+    at connectionFailureError (/home/thebingein/Bingein/server/node_modules/mongodb/lib/cmap/connect.js:379:20)
+    at TLSSocket.<anonymous> (/home/thebingein/Bingein/server/node_modules/mongodb/lib/cmap/connect.js:285:22)
+    at Object.onceWrapper (node:events:629:26)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  connectionGeneration: 0,
+  [Symbol(errorLabels)]: Set(0) {},
+  [cause]: [Error: 0078BFCCCE140000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1586:SSL alert number 80
+  ] {
+    library: 'SSL routines',
+    reason: 'tlsv1 alert internal error',
+    code: 'ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR'
+  }
+}
+Server closed
+MongoDB connected successfully
+MongoDB connected successfully
+Server running on port 2001
+MongoDB connected at mongodb+srv://jobminar:jobminar@cluster0.3uif2ib.mongodb.net/?retryWrites=true&w=majority
+MongoDB disconnected
+MongoNetworkError: 00F8B9E3F57F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1586:SSL alert number 80
+
+    at connectionFailureError (/home/thebingein/Bingein/server/node_modules/mongodb/lib/cmap/connect.js:379:20)
+    at TLSSocket.<anonymous> (/home/thebingein/Bingein/server/node_modules/mongodb/lib/cmap/connect.js:285:22)
+    at Object.onceWrapper (node:events:629:26)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  connectionGeneration: 0,
+  [Symbol(errorLabels)]: Set(0) {},
+  [cause]: [Error: 00F8B9E3F57F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1586:SSL alert number 80
+  ] {
+    library: 'SSL routines',
+    reason: 'tlsv1 alert internal error',
+    code: 'ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR'
+  }
+}
+Server closed
+MongoDB connected successfully
