@@ -6,7 +6,7 @@ const orderSchema = new Schema({
   totalPrice: { type: Number, required: true },
   dateTime: { type: Date, default: Date.now }, 
   name: { type: String, required: true },
-  phoneNumber: { type: String, required: true, match: /^[0-9]{10}$/ }, 
+  phoneNumber: { type: String, required: true},
   numberOfPeople: { type: Number, required: true },
   email: { type: String, required: true },
 });

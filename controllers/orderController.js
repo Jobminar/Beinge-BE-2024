@@ -2,22 +2,30 @@
 import Order from "../models/orderModel.js";
 
 const orderController = {
+  createOrder: async (req, res) => {
+    try {
+      const { paymentID, totalPrice, dateTime, name, phoneNumber, numberOfPeople, email } = req.body;
+
+      if (!paymentID || !totalPrice || !dateTime || !name || !phoneNumber || !numberOfPeople || !email) {
+        return res.status(422).json({ message: "Required fields missing" });
+      }
+
+      const order = new Order({ paymentID, totalPrice, dateTime, name, phoneNumber, numberOfPeople, email });
+      await order.save();
+      res.status(201).json({ message: "Successful order data added", order });
+    } catch (error) {
+      console.error("Error creating order:", error);
+      res.status(500).json({ error: error.message });
+    }
+  },
+
   getOrders: async (req, res) => {
     try {
       const orders = await Order.find();
       res.status(200).json(orders);
     } catch (error) {
+      console.error("Error fetching orders:", error);
       res.status(500).json({ error: error.message });
-    }
-  },
-
-  createOrder: async (req, res) => {
-    try {
-      const order = new Order(req.body);
-      await order.save();
-      res.status(201).json(order);
-    } catch (error) {
-      res.status(400).json({ error: error.message });
     }
   },
 
@@ -32,6 +40,7 @@ const orderController = {
 
       res.status(204).send();
     } catch (error) {
+      console.error("Error deleting order:", error);
       res.status(500).json({ error: error.message });
     }
   },

@@ -26,35 +26,26 @@ router.get("/getreports",reportsController.getReports)
 router.post("/posttheaterdata", typeOfTheater.createTypeOfTheater);
 router.post("/gettheaterdata", typeOfTheater.getAllTypesOfTheaters);
 
-
 router.post("/users", userController.createUser);
 router.get("/getusers", userController.getUsers);
 
 router.get("/getslots", slotController.getSlots);
 router.post("/postslots", slotController.createSlot);
-
 router.delete("/slots/:id", slotController.deleteSlot);
 
 router.get("/getcakes", cakeController.getCakes);
-
 router.post("/postcakes", cakeController.createCake);
-
 router.delete("/cakes/:cakeId", cakeController.deleteCake);
 
 router.get("/getdecorations", decorationController.getDecorations);
-
 router.post('/postdecorations', upload.single('image'), decorationController.createDecoration);
-
 router.delete("/decorations/:id", decorationController.deleteDecoration);
 
 router.get("/getorders", orderController.getOrders);
-
 router.post("/postorders", orderController.createOrder);
-
 router.delete("/deleteorders/:id", orderController.deleteOrder);
 
 router.get("/getbookings",bookingsController.getBookings);
-
 router.post("/postbookings",bookingsController.createBookings);
 router.delete('/deletebookings/:id',bookingsController.deleteBookings);
 
