@@ -13,6 +13,7 @@ import typeOfTheater from "../controllers/typeOfTheaterController.js";
 import bookingsController from "../controllers/bookingsController.js";
 import miniTheaterController from "../controllers/miniTheaterController.js";
 import maxiTheaterController from "../controllers/maxiTheatreController.js";
+import authenticateToken from "../controllers/authMiddleware.js";
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 const router = express.Router();
@@ -33,8 +34,8 @@ router.get("/getslots", slotController.getSlots);
 router.post("/postslots", slotController.createSlot);
 router.delete("/slots/:id", slotController.deleteSlot);
 
-router.get("/getcakes", cakeController.getCakes);
-router.post("/postcakes", cakeController.createCake);
+router.get("/getcakes",authenticateToken, cakeController.getCakes);
+router.post("/postcakes",authenticateToken, cakeController.createCake);
 router.delete("/cakes/:cakeId", cakeController.deleteCake);
 
 router.get("/getdecorations", decorationController.getDecorations);
